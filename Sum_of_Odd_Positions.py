@@ -1,7 +1,8 @@
-n = int(input())
-l = list(map(int,input().split()))
+a = int(input())
+x = list(map(int,input().split()))
 sum = 0
-for i in range(n):
-    if i%2 !=0:
-        sum = sum+l[i]
+for i in range(a):
+    if i%2 != 0:
+        sum = x[i]+sum
+        
 print(sum)
