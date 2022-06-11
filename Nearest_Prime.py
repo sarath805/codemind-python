@@ -1,32 +1,32 @@
-def prin(n):
+def prim(n):
     s = 0
     for i in range(1,n+1):
-        if n%i == 0:
+        if n%i ==0:
             s = s+1
     if s == 2:
         return True
     else:
         return False
         
-def bef(n):
-    while prin(n) ==False:
-        n = n-1
-    return n
 def nxt(n):
-    while prin(n)==False:
+    while prim(n) == False:
         n = n+1
+    return n
+
+def beg(n):
+    while prim(n)==False:
+        n = n-1
     return n
     
 def near(n):
-    x = bef(n)
-    y = nxt(n)
-    
-    if (n-x)<=(y-n):
-        print(x)
+    a = nxt(n)
+    b = beg(n)
+    if (a-n)<(n-b):
+        print(a)
     else:
-        print(y)
-
-a = int(input())
-for i in range(a):
-    b = int(input())
-    near(b)
+        print(b)
+        
+c = int(input())
+for i in range(c):
+    x = int(input())
+    near(x)
