@@ -1,9 +1,10 @@
-def prim(n):
-    s = 0
+def prime(n):
+    sum = 0
     for i in range(1,n+1):
-        if n%i ==0:
-            s = s+1
-    if s==2:
+        if n%i == 0:
+            sum = sum+1
+            
+    if sum == 2:
         return True
     else:
         return False
@@ -11,9 +12,9 @@ def prim(n):
 a = int(input())
 x = list(map(int,input().split()))
 k = int(input())
-sum = 0
-
+c = 0
 for i in x:
-    if prim(i)==True and i>=k :
-        sum = sum+1
-print(sum)
+    if prime(i) == True and i>=k:
+        c = c+1
+        
+print(c)
