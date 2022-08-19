@@ -1,0 +1,7 @@
+n,x = map(int,input().split())
+l = n%(10**x)
+a = str(n)
+p = len(a)
+j = abs(p-x)
+f = n//(10**j)
+print(abs(l-f))
